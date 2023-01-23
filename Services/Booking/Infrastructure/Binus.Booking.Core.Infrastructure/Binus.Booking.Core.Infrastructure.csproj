@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <LangVersion>10</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.13" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.5" />
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.26.0" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.26.0" />
+        <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+        <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.2" />
+        <PackageReference Include="AWSSDK.S3" Version="3.7.101.58" />
+        <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.24" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Application\Binus.Booking.Core.Application\Binus.Booking.Core.Application.csproj" />
+    </ItemGroup>
+
+</Project>
