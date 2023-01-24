@@ -3,8 +3,10 @@ using Binus.Transaction.Core.Application.Services;
 using Binus.Transaction.Core.Constant.Constant;
 using Binus.Transaction.Core.Domain.AggregateRoots.Account;
 using Binus.Transaction.Core.Domain.AggregateRoots.Post;
+using Binus.Transaction.Core.Domain.AggregateRoots.TransactionAggregate;
 using Binus.Transaction.Core.Infrastructure.DataSources;
 using Binus.Transaction.Core.Infrastructure.Models;
+using Binus.Transaction.Core.Infrastructure.Repositories;
 using Binus.Transaction.Core.Infrastructure.Repositories.Common;
 using Binus.Transaction.Core.Infrastructure.Repositories.Post;
 using Binus.Transaction.Core.Infrastructure.Services;
@@ -49,6 +51,7 @@ namespace Binus.Transaction.Core.Infrastructure
 
             services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<IPostRepository, PostRepository>();
+            services.AddScoped<ITransactionRepository, TransactionRepository>();
 
             #endregion
 

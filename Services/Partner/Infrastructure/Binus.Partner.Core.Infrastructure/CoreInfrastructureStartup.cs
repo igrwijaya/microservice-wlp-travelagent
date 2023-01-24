@@ -2,9 +2,11 @@ using System;
 using Binus.Partner.Core.Application.Services;
 using Binus.Partner.Core.Constant.Constant;
 using Binus.Partner.Core.Domain.AggregateRoots.Account;
+using Binus.Partner.Core.Domain.AggregateRoots.PartnerAggregate;
 using Binus.Partner.Core.Domain.AggregateRoots.Post;
 using Binus.Partner.Core.Infrastructure.DataSources;
 using Binus.Partner.Core.Infrastructure.Models;
+using Binus.Partner.Core.Infrastructure.Repositories;
 using Binus.Partner.Core.Infrastructure.Repositories.Common;
 using Binus.Partner.Core.Infrastructure.Repositories.Post;
 using Binus.Partner.Core.Infrastructure.Services;
@@ -49,6 +51,7 @@ namespace Binus.Partner.Core.Infrastructure
 
             services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<IPostRepository, PostRepository>();
+            services.AddScoped<IPartnerRepository, PartnerRepository>();
 
             #endregion
 

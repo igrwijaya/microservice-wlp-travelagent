@@ -1,10 +1,13 @@
 using System;
 using Binus.Accommodation.Core.Application.Services;
 using Binus.Accommodation.Core.Constant.Constant;
+using Binus.Accommodation.Core.Domain.AggregateRoots.AccommodationBookingCodeAggregate;
+using Binus.Accommodation.Core.Domain.AggregateRoots.AccommodationSearchAggregate;
 using Binus.Accommodation.Core.Domain.AggregateRoots.Account;
 using Binus.Accommodation.Core.Domain.AggregateRoots.Post;
 using Binus.Accommodation.Core.Infrastructure.DataSources;
 using Binus.Accommodation.Core.Infrastructure.Models;
+using Binus.Accommodation.Core.Infrastructure.Repositories;
 using Binus.Accommodation.Core.Infrastructure.Repositories.Common;
 using Binus.Accommodation.Core.Infrastructure.Repositories.Post;
 using Binus.Accommodation.Core.Infrastructure.Services;
@@ -49,6 +52,8 @@ namespace Binus.Accommodation.Core.Infrastructure
 
             services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<IPostRepository, PostRepository>();
+            services.AddScoped<IAccommodationSearchRepository, AccommodationSearchRepository>();
+            services.AddScoped<IAccommodationBookingCodeRepository, AccommodationBookingCodeRepository>();
 
             #endregion
 
