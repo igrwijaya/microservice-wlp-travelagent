@@ -1,4 +1,5 @@
-﻿using Binus.Partner.Core.Domain.Commons;
+﻿using System.Collections.Generic;
+using Binus.Partner.Core.Domain.Commons;
 
 namespace Binus.Partner.Core.Domain.AggregateRoots.PartnerAggregate;
 
@@ -9,12 +10,11 @@ public class Partner : CoreEntity, IAggregateRoot
         
     }
 
-    public Partner(string brandName, string brandCode, string url, string wlpConfiguration, string logo)
+    public Partner(string brandName, string brandCode, string url, string logo)
     {
         BrandName = brandName;
         BrandCode = brandCode;
         Url = url;
-        WlpConfiguration = wlpConfiguration;
         Logo = logo;
     }
     
@@ -23,8 +23,8 @@ public class Partner : CoreEntity, IAggregateRoot
     public string BrandCode { get; private set; }
 
     public string Url { get; private set; }
-
-    public string WlpConfiguration { get; private set; }
-
+    
     public string Logo { get; private set; }
+
+    public List<PartnerSetting> Settings { get; set; }
 }

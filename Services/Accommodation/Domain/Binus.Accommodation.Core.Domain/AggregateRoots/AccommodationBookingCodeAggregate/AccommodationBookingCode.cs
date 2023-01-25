@@ -1,4 +1,5 @@
-﻿using Binus.Accommodation.Core.Domain.Commons;
+﻿using System.Collections.Generic;
+using Binus.Accommodation.Core.Domain.Commons;
 
 namespace Binus.Accommodation.Core.Domain.AggregateRoots.AccommodationBookingCodeAggregate;
 
@@ -22,5 +23,5 @@ public class AccommodationBookingCode : CoreEntity, IAggregateRoot
 
     public int CustomerId { get; private set; }
 
-    public AccommodationGuest AccommodationGuest { get; set; }
+    public List<AccommodationGuest> AccommodationGuests { get; set; }
 }

@@ -1,14 +1,10 @@
 using System;
 using Binus.Deals.Core.Application.Services;
 using Binus.Deals.Core.Constant.Constant;
-using Binus.Deals.Core.Domain.AggregateRoots.Account;
 using Binus.Deals.Core.Domain.AggregateRoots.DealsAggregate;
-using Binus.Deals.Core.Domain.AggregateRoots.Post;
 using Binus.Deals.Core.Infrastructure.DataSources;
 using Binus.Deals.Core.Infrastructure.Models;
 using Binus.Deals.Core.Infrastructure.Repositories;
-using Binus.Deals.Core.Infrastructure.Repositories.Common;
-using Binus.Deals.Core.Infrastructure.Repositories.Post;
 using Binus.Deals.Core.Infrastructure.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -49,8 +45,6 @@ namespace Binus.Deals.Core.Infrastructure
 
             #region Repositories
 
-            services.AddScoped<IAccountRepository, AccountRepository>();
-            services.AddScoped<IPostRepository, PostRepository>();
             services.AddScoped<IDealsRepository, DealsRepository>();
 
             #endregion

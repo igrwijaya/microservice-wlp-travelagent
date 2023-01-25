@@ -1,14 +1,10 @@
 using System;
 using Binus.Booking.Core.Application.Services;
 using Binus.Booking.Core.Constant.Constant;
-using Binus.Booking.Core.Domain.AggregateRoots.Account;
 using Binus.Booking.Core.Domain.AggregateRoots.BookingAggregate;
-using Binus.Booking.Core.Domain.AggregateRoots.Post;
 using Binus.Booking.Core.Infrastructure.DataSources;
 using Binus.Booking.Core.Infrastructure.Models;
 using Binus.Booking.Core.Infrastructure.Repositories;
-using Binus.Booking.Core.Infrastructure.Repositories.Common;
-using Binus.Booking.Core.Infrastructure.Repositories.Post;
 using Binus.Booking.Core.Infrastructure.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -49,8 +45,6 @@ namespace Binus.Booking.Core.Infrastructure
 
             #region Repositories
 
-            services.AddScoped<IAccountRepository, AccountRepository>();
-            services.AddScoped<IPostRepository, PostRepository>();
             services.AddScoped<IBookingRepository, BookingRepository>();
 
             #endregion

@@ -1,7 +1,7 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/Post/{everything}",
+      "DownstreamPathTemplate": "/api/Deals/{everything}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -9,7 +9,7 @@
           "Port": 1001
         }
       ],
-      "UpstreamPathTemplate": "/posts/{everything}",
+      "UpstreamPathTemplate": "/deals/{everything}",
       "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
     }
   ],

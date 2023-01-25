@@ -1,14 +1,10 @@
 using System;
 using Binus.Customer.Core.Application.Services;
 using Binus.Customer.Core.Constant.Constant;
-using Binus.Customer.Core.Domain.AggregateRoots.Account;
 using Binus.Customer.Core.Domain.AggregateRoots.CustomerAggregate;
-using Binus.Customer.Core.Domain.AggregateRoots.Post;
 using Binus.Customer.Core.Infrastructure.DataSources;
 using Binus.Customer.Core.Infrastructure.Models;
 using Binus.Customer.Core.Infrastructure.Repositories;
-using Binus.Customer.Core.Infrastructure.Repositories.Common;
-using Binus.Customer.Core.Infrastructure.Repositories.Post;
 using Binus.Customer.Core.Infrastructure.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -49,8 +45,6 @@ namespace Binus.Customer.Core.Infrastructure
 
             #region Repositories
 
-            services.AddScoped<IAccountRepository, AccountRepository>();
-            services.AddScoped<IPostRepository, PostRepository>();
             services.AddScoped<ICustomerRepository, CustomerRepository>();
 
             #endregion

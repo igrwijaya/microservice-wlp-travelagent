@@ -48,7 +48,6 @@ namespace Binus.Booking.Core.Infrastructure.Services
             {
                 var user = new AppUserIdentity
                 {
-                    AccountId = accountId,
                     UserName = email,
                     Email = email
                 };
@@ -114,8 +113,7 @@ namespace Binus.Booking.Core.Infrastructure.Services
             var customClaims = new[]
             {
                 new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.Sid, user.Id),
-                new Claim(ClaimTypes.NameIdentifier, user.AccountId.ToString())
+                new Claim(ClaimTypes.Sid, user.Id)
             };
 
             claims.AddRange(customClaims);

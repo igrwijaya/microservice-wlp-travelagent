@@ -26,5 +26,5 @@ public class AccommodationGuest : CoreEntity
 
     public string Gender { get; private set; }
 
-    public List<AccommodationBookingCode> BookingCodes { get; set; }
+    public AccommodationBookingCode AccommodationBookingCode { get; set; }
 }

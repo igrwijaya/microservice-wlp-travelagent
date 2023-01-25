@@ -1,4 +1,3 @@
-using Binus.Partner.Core.Domain.AggregateRoots.Account;
 using Microsoft.AspNetCore.Identity;
 
 namespace Binus.Partner.Core.Infrastructure.Models
@@ -7,9 +6,6 @@ namespace Binus.Partner.Core.Infrastructure.Models
     {
         #region Entity Relation Properties
 
-        public int AccountId { get; set; }
-        
-        public Account Account { get; set; }
 
         #endregion
     }
