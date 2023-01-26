@@ -10,14 +10,11 @@ public class AccommodationBookingCode : CoreEntity, IAggregateRoot
         
     }
 
-    public AccommodationBookingCode(int accommodationGuestId, string code, int customerId)
+    public AccommodationBookingCode(string code, int customerId)
     {
-        AccommodationGuestId = accommodationGuestId;
         Code = code;
         CustomerId = customerId;
     }
-    
-    public int AccommodationGuestId { get; private set; }
 
     public string Code { get; private set; }
 

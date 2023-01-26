@@ -17,5 +17,15 @@ namespace Binus.Accommodation.Core.Domain.Commons
         public string LastModifiedBy { get; set; }
 
         #endregion
+
+        public void ApplyAuditableEntity(
+            CoreEntity attachedEntity)
+        {
+            Id = attachedEntity.Id;
+            CreatedDateTime = attachedEntity.CreatedDateTime;
+            CreatedBy = attachedEntity.CreatedBy;
+            LastModifiedDateTime = attachedEntity.LastModifiedDateTime;
+            LastModifiedBy = attachedEntity.LastModifiedBy;
+        }
     }
 }

@@ -20,6 +20,10 @@ namespace Binus.Accommodation.Core.Domain.Commons
 
         IEnumerable<TEntity> GetAll();
 
+        CoreDataTable<TEntity> GetDataTable(int page, int size);
+
+        IEnumerable<TEntity> Get(int page, int size);
+
         #endregion
     }
 }
