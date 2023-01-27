@@ -5,15 +5,15 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using Binus.Customer.Core.Application.Services;
-using Binus.Customer.Core.Application.Services.Response;
-using Binus.Customer.Core.Constant.Constant;
-using Binus.Customer.Core.Infrastructure.Models;
+using Binus.Reporting.Core.Application.Services;
+using Binus.Reporting.Core.Application.Services.Response;
+using Binus.Reporting.Core.Constant.Constant;
+using Binus.Reporting.Core.Infrastructure.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Binus.Customer.Core.Infrastructure.Services
+namespace Binus.Reporting.Core.Infrastructure.Services
 {
     public class IdentityService : IIdentityService
     {

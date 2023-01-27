@@ -1,19 +1,19 @@
 using System;
-using Binus.Customer.Core.Application.Services;
-using Binus.Customer.Core.Constant.Constant;
-using Binus.Customer.Core.Domain.AggregateRoots.Account;
-using Binus.Customer.Core.Domain.AggregateRoots.Post;
-using Binus.Customer.Core.Infrastructure.DataSources;
-using Binus.Customer.Core.Infrastructure.Models;
-using Binus.Customer.Core.Infrastructure.Repositories.Common;
-using Binus.Customer.Core.Infrastructure.Repositories.Post;
-using Binus.Customer.Core.Infrastructure.Services;
+using Binus.Reporting.Core.Application.Services;
+using Binus.Reporting.Core.Constant.Constant;
+using Binus.Reporting.Core.Domain.AggregateRoots.Account;
+using Binus.Reporting.Core.Domain.AggregateRoots.Post;
+using Binus.Reporting.Core.Infrastructure.DataSources;
+using Binus.Reporting.Core.Infrastructure.Models;
+using Binus.Reporting.Core.Infrastructure.Repositories.Common;
+using Binus.Reporting.Core.Infrastructure.Repositories.Post;
+using Binus.Reporting.Core.Infrastructure.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Binus.Customer.Core.Infrastructure
+namespace Binus.Reporting.Core.Infrastructure
 {
     public static class CoreInfrastructureStartup
     {

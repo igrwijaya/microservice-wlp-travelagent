@@ -1,4 +1,4 @@
-namespace Binus.Customer.Core.Application.Command.Common.Account.Queries.AccountLogin
+namespace Binus.Reporting.Core.Application.Command.Common.Account.Queries.AccountLogin
 {
     public class AccountLoginDto
     {

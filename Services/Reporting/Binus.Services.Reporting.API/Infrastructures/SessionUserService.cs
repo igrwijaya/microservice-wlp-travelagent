@@ -1,8 +1,8 @@
 using System.Security.Claims;
-using Binus.Customer.Core.Application.Services;
+using Binus.Reporting.Core.Application.Services;
 using Microsoft.AspNetCore.Http;
 
-namespace Binus.Services.Customer.API.Infrastructures
+namespace Binus.Services.Reporting.API.Infrastructures
 {
     public class SessionUserService : ISessionUserService
     {

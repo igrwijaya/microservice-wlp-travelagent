@@ -6,11 +6,11 @@ using Amazon.Runtime.CredentialManagement;
 using Amazon.S3;
 using Amazon.S3.Model;
 using Amazon.S3.Util;
-using Binus.Customer.Core.Application.Services.Response;
-using Binus.Customer.Core.Constant.Constant;
+using Binus.Reporting.Core.Application.Services.Response;
+using Binus.Reporting.Core.Constant.Constant;
 using Microsoft.Extensions.Configuration;
 
-namespace Binus.Customer.Core.Infrastructure.Services
+namespace Binus.Reporting.Core.Infrastructure.Services
 {
     public class AwsBaseService
     {

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Binus.Customer.Core.Domain.Commons;
-using Binus.Customer.Core.Domain.Dtos.Post;
+using Binus.Reporting.Core.Domain.Commons;
+using Binus.Reporting.Core.Domain.Dtos.Post;
 
-namespace Binus.Customer.Core.Domain.AggregateRoots.Post
+namespace Binus.Reporting.Core.Domain.AggregateRoots.Post
 {
     public interface IPostRepository : IBaseRepository<Post>
     {

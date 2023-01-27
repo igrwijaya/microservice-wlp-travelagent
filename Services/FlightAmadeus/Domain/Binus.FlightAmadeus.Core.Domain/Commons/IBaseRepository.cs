@@ -19,6 +19,10 @@ namespace Binus.FlightAmadeus.Core.Domain.Commons
         Task<bool> IsExist(int id);
 
         IEnumerable<TEntity> GetAll();
+ 
+        CoreDataTable<TEntity> GetDataTable(int page, int size);
+
+        IEnumerable<TEntity> Get(int page, int size);
 
         #endregion
     }

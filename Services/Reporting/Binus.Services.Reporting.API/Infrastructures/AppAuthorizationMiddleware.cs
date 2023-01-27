@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
-namespace Binus.Services.Customer.API.Infrastructures
+namespace Binus.Services.Reporting.API.Infrastructures
 {
     public class AppAuthorizationMiddleware
     {

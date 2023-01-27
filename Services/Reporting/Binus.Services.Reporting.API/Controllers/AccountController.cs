@@ -1,13 +1,13 @@
 using System.Threading.Tasks;
-using Binus.Customer.Core.Application.Command.Common.Account.Commands.CreateAccount;
-using Binus.Customer.Core.Application.Command.Common.Account.Commands.RemoveAccount;
-using Binus.Customer.Core.Application.Command.Common.Account.Queries.AccountLogin;
-using Binus.Customer.Core.Application.Commons;
+using Binus.Reporting.Core.Application.Command.Common.Account.Commands.CreateAccount;
+using Binus.Reporting.Core.Application.Command.Common.Account.Commands.RemoveAccount;
+using Binus.Reporting.Core.Application.Command.Common.Account.Queries.AccountLogin;
+using Binus.Reporting.Core.Application.Commons;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Binus.Services.Customer.API.Controllers
+namespace Binus.Services.Reporting.API.Controllers
 {
     public class AccountController : BaseController
     {

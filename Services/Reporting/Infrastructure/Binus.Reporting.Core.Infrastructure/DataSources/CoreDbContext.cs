@@ -2,13 +2,13 @@ using System;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
-using Binus.Customer.Core.Application.Services;
-using Binus.Customer.Core.Domain.Commons;
-using Binus.Customer.Core.Infrastructure.Models;
+using Binus.Reporting.Core.Application.Services;
+using Binus.Reporting.Core.Domain.Commons;
+using Binus.Reporting.Core.Infrastructure.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Binus.Customer.Core.Infrastructure.DataSources
+namespace Binus.Reporting.Core.Infrastructure.DataSources
 {
     public class CoreDbContext : IdentityDbContext<AppUserIdentity>
     {

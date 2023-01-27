@@ -1,4 +1,4 @@
-namespace Binus.Customer.Core.Application.Services
+namespace Binus.Reporting.Core.Application.Services
 {
     public interface ISessionUserService
     {

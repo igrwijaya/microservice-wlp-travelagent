@@ -1,4 +1,4 @@
-﻿namespace Binus.Customer.App.DbMigrations
+﻿namespace Binus.Reporting.App.DbMigrations
 {
     class Program
     {

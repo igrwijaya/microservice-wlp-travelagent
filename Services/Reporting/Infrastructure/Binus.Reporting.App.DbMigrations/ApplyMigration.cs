@@ -1,7 +1,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 
-namespace Binus.Customer.App.DbMigrations
+namespace Binus.Reporting.App.DbMigrations
 {
     public class ApplyMigration
     {

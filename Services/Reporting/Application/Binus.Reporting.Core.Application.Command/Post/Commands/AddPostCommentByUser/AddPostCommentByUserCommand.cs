@@ -1,7 +1,7 @@
-using Binus.Customer.Core.Application.Commons;
+using Binus.Reporting.Core.Application.Commons;
 using MediatR;
 
-namespace Binus.Customer.Core.Application.Command.Post.Commands.AddPostCommentByUser
+namespace Binus.Reporting.Core.Application.Command.Post.Commands.AddPostCommentByUser
 {
     public class AddPostCommentByUserCommand : IRequest<BaseCommandResult>
     {

@@ -1,8 +1,8 @@
-using Binus.Customer.Core.Constant.Entity;
+using Binus.Reporting.Core.Constant.Entity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Binus.Customer.Core.Infrastructure.DataSources.Configurations.Post
+namespace Binus.Reporting.Core.Infrastructure.DataSources.Configurations.Post
 {
     public class PostEntityConfiguration : IEntityTypeConfiguration<Domain.AggregateRoots.Post.Post>
     {

@@ -1,5 +1,5 @@
 
-namespace Binus.Customer.Core.Application.Services.Response
+namespace Binus.Reporting.Core.Application.Services.Response
 {
     public class GenericResponse<TData> : BasicResponse
     {

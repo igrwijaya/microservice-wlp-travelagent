@@ -102,7 +102,7 @@ public abstract class CrudController<TModel, TCreateViewModel, TUpdateViewModel>
             return BadRequest();
         }
         
-        model.ApplyAuditableEntity(response);
+        model.AttachAuditableEntity(response);
         
         await BaseRepository.UpdateAsync(model);
 

@@ -1,6 +1,6 @@
 using System;
 
-namespace Binus.Customer.Core.Application.Commons.Exceptions
+namespace Binus.Reporting.Core.Application.Commons.Exceptions
 {
     public class CommandHandlerException : Exception
     {

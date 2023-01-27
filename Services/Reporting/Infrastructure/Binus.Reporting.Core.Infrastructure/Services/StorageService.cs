@@ -1,10 +1,10 @@
 using System.IO;
 using System.Threading.Tasks;
-using Binus.Customer.Core.Application.Services;
-using Binus.Customer.Core.Application.Services.Response;
+using Binus.Reporting.Core.Application.Services;
+using Binus.Reporting.Core.Application.Services.Response;
 using Microsoft.Extensions.Configuration;
 
-namespace Binus.Customer.Core.Infrastructure.Services
+namespace Binus.Reporting.Core.Infrastructure.Services
 {
     public class StorageService : AwsBaseService, IStorageService
     {

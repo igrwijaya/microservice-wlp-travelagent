@@ -1,13 +1,13 @@
 using System.Threading;
 using System.Threading.Tasks;
-using Binus.Customer.Core.Application.Commons;
-using Binus.Customer.Core.Application.Services;
-using Binus.Customer.Core.Constant.Constant;
-using Binus.Customer.Core.Domain.AggregateRoots.Account;
-using Binus.Customer.Core.Domain.AggregateRoots.Post;
+using Binus.Reporting.Core.Application.Commons;
+using Binus.Reporting.Core.Application.Services;
+using Binus.Reporting.Core.Constant.Constant;
+using Binus.Reporting.Core.Domain.AggregateRoots.Account;
+using Binus.Reporting.Core.Domain.AggregateRoots.Post;
 using MediatR;
 
-namespace Binus.Customer.Core.Application.Command.Common.Account.Commands.RemoveAccount
+namespace Binus.Reporting.Core.Application.Command.Common.Account.Commands.RemoveAccount
 {
     public class RemoveAccountCommandHandler : IRequestHandler<RemoveAccountCommand, BaseCommandResult>
     {

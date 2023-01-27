@@ -2,12 +2,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Binus.Customer.Core.Application.Commons;
-using Binus.Customer.Core.Application.Services;
-using Binus.Customer.Core.Domain.AggregateRoots.Post;
+using Binus.Reporting.Core.Application.Commons;
+using Binus.Reporting.Core.Application.Services;
+using Binus.Reporting.Core.Domain.AggregateRoots.Post;
 using MediatR;
 
-namespace Binus.Customer.Core.Application.Command.Post.Queries.GetPostWithLatestComment
+namespace Binus.Reporting.Core.Application.Command.Post.Queries.GetPostWithLatestComment
 {
     public class GetPostWithLatestCommentQueryHandler : IRequestHandler<GetPostWithLatestCommentQuery, BaseQueryResult<List<GetPostWithLatestCommentDto>>>
     {

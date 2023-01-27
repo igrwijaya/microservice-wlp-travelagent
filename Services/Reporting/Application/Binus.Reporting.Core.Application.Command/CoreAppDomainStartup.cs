@@ -3,7 +3,7 @@ using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Binus.Customer.Core.Application.Command
+namespace Binus.Reporting.Core.Application.Command
 {
     public static class CoreAppDomainStartup
     {

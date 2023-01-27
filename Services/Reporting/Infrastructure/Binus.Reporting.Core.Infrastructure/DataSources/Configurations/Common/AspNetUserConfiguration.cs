@@ -1,8 +1,8 @@
-using Binus.Customer.Core.Infrastructure.Models;
+using Binus.Reporting.Core.Infrastructure.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Binus.Customer.Core.Infrastructure.DataSources.Configurations.Common
+namespace Binus.Reporting.Core.Infrastructure.DataSources.Configurations.Common
 {
     public class AspNetUserConfiguration : IEntityTypeConfiguration<AppUserIdentity>
     {

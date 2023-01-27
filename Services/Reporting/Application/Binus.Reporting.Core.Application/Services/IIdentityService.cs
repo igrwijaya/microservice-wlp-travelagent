@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
-using Binus.Customer.Core.Application.Services.Response;
+using Binus.Reporting.Core.Application.Services.Response;
 
-namespace Binus.Customer.Core.Application.Services
+namespace Binus.Reporting.Core.Application.Services
 {
     public interface IIdentityService
     {

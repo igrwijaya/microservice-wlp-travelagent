@@ -4,11 +4,11 @@ using System.Linq;
 using System.Linq.Dynamic.Core;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using Binus.Customer.Core.Domain.Commons;
-using Binus.Customer.Core.Infrastructure.DataSources;
+using Binus.Reporting.Core.Domain.Commons;
+using Binus.Reporting.Core.Infrastructure.DataSources;
 using Microsoft.EntityFrameworkCore;
 
-namespace Binus.Customer.Core.Infrastructure.Repositories
+namespace Binus.Reporting.Core.Infrastructure.Repositories
 {
     public class BaseRepository<TEntity> : IBaseRepository<TEntity>
         where TEntity : class, IAggregateRoot
@@ -85,6 +85,32 @@ namespace Binus.Customer.Core.Infrastructure.Repositories
             var dbSet = Context.Set<TEntity>();
 
             return dbSet.AsNoTracking().ToList();
+        }
+
+        public CoreDataTable<TEntity> GetDataTable(int page, int size)
+        {
+            return GetDataTable(new CoreDataTableParameter
+            {
+                Start = page,
+                Length = size,
+                SortColumn = nameof(CoreEntity.CreatedDateTime),
+                SortColumnDirection = "DESC"
+            }, set => set);
+        }
+
+        public IEnumerable<TEntity> Get(int page, int size)
+        {
+            var dbSet = Context.Set<TEntity>();
+
+            if (size == -1)
+            {
+                return dbSet.AsQueryable().ToList();
+            }
+            
+            return dbSet.AsQueryable()
+                .Skip(page * size)
+                .Take(size)
+                .ToList();
         }
 
         #endregion

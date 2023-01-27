@@ -18,7 +18,7 @@ namespace Binus.Accommodation.Core.Domain.Commons
 
         #endregion
 
-        public void ApplyAuditableEntity(
+        public void AttachAuditableEntity(
             CoreEntity attachedEntity)
         {
             Id = attachedEntity.Id;

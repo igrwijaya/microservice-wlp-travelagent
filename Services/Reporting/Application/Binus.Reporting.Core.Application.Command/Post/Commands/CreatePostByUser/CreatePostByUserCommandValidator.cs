@@ -1,10 +1,10 @@
 using System.IO;
-using Binus.Customer.Core.Constant.Constant;
-using Binus.Customer.Core.Constant.Entity;
+using Binus.Reporting.Core.Constant.Constant;
+using Binus.Reporting.Core.Constant.Entity;
 using FluentValidation;
 using Microsoft.Extensions.Configuration;
 
-namespace Binus.Customer.Core.Application.Command.Post.Commands.CreatePostByUser
+namespace Binus.Reporting.Core.Application.Command.Post.Commands.CreatePostByUser
 {
     public class CreatePostByUserCommandValidator : AbstractValidator<CreatePostByUserCommand>
     {

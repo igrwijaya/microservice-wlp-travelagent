@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentValidation.Results;
 
-namespace Binus.Customer.Core.Application.Commons.Exceptions
+namespace Binus.Reporting.Core.Application.Commons.Exceptions
 {
     public class ValidationException: Exception
     {

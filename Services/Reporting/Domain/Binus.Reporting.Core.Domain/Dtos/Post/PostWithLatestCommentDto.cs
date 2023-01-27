@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using Binus.Customer.Core.Domain.AggregateRoots.Post;
+using Binus.Reporting.Core.Domain.AggregateRoots.Post;
 
-namespace Binus.Customer.Core.Domain.Dtos.Post
+namespace Binus.Reporting.Core.Domain.Dtos.Post
 {
     public class PostWithLatestCommentDto
     {

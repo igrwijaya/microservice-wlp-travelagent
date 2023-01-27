@@ -1,4 +1,4 @@
-namespace Binus.Customer.Core.Constant.Entity
+namespace Binus.Reporting.Core.Constant.Entity
 {
     public class PostEntityConstant
     {

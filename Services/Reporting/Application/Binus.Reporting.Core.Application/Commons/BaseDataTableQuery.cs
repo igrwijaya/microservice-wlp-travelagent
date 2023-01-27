@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Binus.Customer.Core.Application.Commons
+namespace Binus.Reporting.Core.Application.Commons
 {
     public class BaseDataTableQuery<TResult> : IRequest<BaseDataTableResult<TResult>>
     {

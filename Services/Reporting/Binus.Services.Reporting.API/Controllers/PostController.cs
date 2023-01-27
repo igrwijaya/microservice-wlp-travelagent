@@ -1,15 +1,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Binus.Customer.Core.Application.Command.Post.Commands.AddPostCommentByUser;
-using Binus.Customer.Core.Application.Command.Post.Commands.CreatePostByUser;
-using Binus.Customer.Core.Application.Command.Post.Queries.GetPostWithLatestComment;
-using Binus.Customer.Core.Application.Commons;
+using Binus.Reporting.Core.Application.Command.Post.Commands.AddPostCommentByUser;
+using Binus.Reporting.Core.Application.Command.Post.Commands.CreatePostByUser;
+using Binus.Reporting.Core.Application.Command.Post.Queries.GetPostWithLatestComment;
+using Binus.Reporting.Core.Application.Commons;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Binus.Services.Customer.API.Controllers
+namespace Binus.Services.Reporting.API.Controllers
 {
     public class PostController : BaseController
     {

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Binus.Customer.Core.Application.Services.Response
+namespace Binus.Reporting.Core.Application.Services.Response
 {
     public class BasicResponse
     {

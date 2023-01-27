@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Binus.Services.Customer.API.Controllers
+namespace Binus.Services.Reporting.API.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]

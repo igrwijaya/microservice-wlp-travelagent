@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using Binus.Customer.Core.Application.Commons;
+using Binus.Reporting.Core.Application.Commons;
 using MediatR;
 
-namespace Binus.Customer.Core.Application.Command.Post.Queries.GetPostWithLatestComment
+namespace Binus.Reporting.Core.Application.Command.Post.Queries.GetPostWithLatestComment
 {
     public class GetPostWithLatestCommentQuery : IRequest<BaseQueryResult<List<GetPostWithLatestCommentDto>>>
     {

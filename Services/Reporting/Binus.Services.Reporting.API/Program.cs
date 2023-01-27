@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace Binus.Services.Customer.API
+namespace Binus.Services.Reporting.API
 {
     public class Program
     {

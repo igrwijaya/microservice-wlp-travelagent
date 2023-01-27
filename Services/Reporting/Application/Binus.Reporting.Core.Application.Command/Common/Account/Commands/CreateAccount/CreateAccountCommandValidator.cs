@@ -1,7 +1,7 @@
-using Binus.Customer.Core.Constant.Entity;
+using Binus.Reporting.Core.Constant.Entity;
 using FluentValidation;
 
-namespace Binus.Customer.Core.Application.Command.Common.Account.Commands.CreateAccount
+namespace Binus.Reporting.Core.Application.Command.Common.Account.Commands.CreateAccount
 {
     public class CreateAccountCommandValidator : AbstractValidator<CreateAccountCommand>
     {

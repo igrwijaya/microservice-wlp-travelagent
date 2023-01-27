@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Binus.Customer.Core.Domain.Commons
+namespace Binus.Reporting.Core.Domain.Commons
 {
     public class CoreDataTable<TDataTable>
     {

@@ -1,7 +1,7 @@
-using Binus.Customer.Core.Domain.AggregateRoots.Account;
-using Binus.Customer.Core.Infrastructure.DataSources;
+using Binus.Reporting.Core.Domain.AggregateRoots.Account;
+using Binus.Reporting.Core.Infrastructure.DataSources;
 
-namespace Binus.Customer.Core.Infrastructure.Repositories.Common
+namespace Binus.Reporting.Core.Infrastructure.Repositories.Common
 {
     public class AccountRepository : BaseRepository<Account>, IAccountRepository
     {

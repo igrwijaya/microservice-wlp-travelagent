@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Binus.Customer.Core.Application.Command.Post.Queries.GetPostWithLatestComment
+namespace Binus.Reporting.Core.Application.Command.Post.Queries.GetPostWithLatestComment
 {
     public class GetPostWithLatestCommentDto
     {

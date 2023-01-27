@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Binus.Customer.Core.Application.Commons
+namespace Binus.Reporting.Core.Application.Commons
 {
     public class BaseDataTableResult<TDto>
     {

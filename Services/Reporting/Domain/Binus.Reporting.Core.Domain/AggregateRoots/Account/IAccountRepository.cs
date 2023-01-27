@@ -1,6 +1,6 @@
-using Binus.Customer.Core.Domain.Commons;
+using Binus.Reporting.Core.Domain.Commons;
 
-namespace Binus.Customer.Core.Domain.AggregateRoots.Account
+namespace Binus.Reporting.Core.Domain.AggregateRoots.Account
 {
     public interface IAccountRepository : IBaseRepository<Account>
     {

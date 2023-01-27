@@ -1,12 +1,12 @@
 using System;
 using System.IO;
-using Binus.Customer.Core.Constant.Constant;
-using Binus.Customer.Core.Infrastructure.DataSources;
+using Binus.Reporting.Core.Constant.Constant;
+using Binus.Reporting.Core.Infrastructure.DataSources;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 
-namespace Binus.Customer.App.DbMigrations
+namespace Binus.Reporting.App.DbMigrations
 {
     public class SqlDesignTimeDbContextFactory : IDesignTimeDbContextFactory<CoreDbContext>
     {

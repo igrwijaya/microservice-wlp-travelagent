@@ -1,7 +1,7 @@
-using Binus.Customer.Core.Domain.AggregateRoots.Account;
+using Binus.Reporting.Core.Domain.AggregateRoots.Account;
 using Microsoft.AspNetCore.Identity;
 
-namespace Binus.Customer.Core.Infrastructure.Models
+namespace Binus.Reporting.Core.Infrastructure.Models
 {
     public class AppUserIdentity : IdentityUser
     {

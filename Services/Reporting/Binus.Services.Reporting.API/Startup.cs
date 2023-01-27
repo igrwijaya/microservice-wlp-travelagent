@@ -1,11 +1,11 @@
 using System;
 using System.Text;
-using Binus.Customer.Core.Application;
-using Binus.Customer.Core.Application.Command;
-using Binus.Customer.Core.Application.Services;
-using Binus.Customer.Core.Constant.Constant;
-using Binus.Customer.Core.Infrastructure;
-using Binus.Services.Customer.API.Infrastructures;
+using Binus.Reporting.Core.Application;
+using Binus.Reporting.Core.Application.Command;
+using Binus.Reporting.Core.Application.Services;
+using Binus.Reporting.Core.Constant.Constant;
+using Binus.Reporting.Core.Infrastructure;
+using Binus.Services.Reporting.API.Infrastructures;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -15,7 +15,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
-namespace Binus.Services.Customer.API
+namespace Binus.Services.Reporting.API
 {
     public class Startup
     {

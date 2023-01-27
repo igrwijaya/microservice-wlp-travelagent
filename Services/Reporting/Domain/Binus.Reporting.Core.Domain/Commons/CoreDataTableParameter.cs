@@ -1,4 +1,4 @@
-namespace Binus.Customer.Core.Domain.Commons
+namespace Binus.Reporting.Core.Domain.Commons
 {
     public class CoreDataTableParameter
     {

@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
-using Binus.Customer.Core.Domain.Commons;
+using Binus.Reporting.Core.Domain.Commons;
 
-namespace Binus.Customer.Core.Domain.AggregateRoots.Post
+namespace Binus.Reporting.Core.Domain.AggregateRoots.Post
 {
     public class Post : CoreEntity, IAggregateRoot
     {

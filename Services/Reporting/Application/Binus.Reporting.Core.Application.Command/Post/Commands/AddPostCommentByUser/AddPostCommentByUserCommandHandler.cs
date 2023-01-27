@@ -1,11 +1,11 @@
 using System.Threading;
 using System.Threading.Tasks;
-using Binus.Customer.Core.Application.Commons;
-using Binus.Customer.Core.Application.Services;
-using Binus.Customer.Core.Domain.AggregateRoots.Post;
+using Binus.Reporting.Core.Application.Commons;
+using Binus.Reporting.Core.Application.Services;
+using Binus.Reporting.Core.Domain.AggregateRoots.Post;
 using MediatR;
 
-namespace Binus.Customer.Core.Application.Command.Post.Commands.AddPostCommentByUser
+namespace Binus.Reporting.Core.Application.Command.Post.Commands.AddPostCommentByUser
 {
     public class AddPostCommentByUserCommandHandler : IRequestHandler<AddPostCommentByUserCommand, BaseCommandResult>
     {

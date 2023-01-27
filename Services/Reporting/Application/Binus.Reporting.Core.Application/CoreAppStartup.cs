@@ -1,10 +1,10 @@
 using System.Reflection;
-using Binus.Customer.Core.Application.Commons.Behaviours;
+using Binus.Reporting.Core.Application.Commons.Behaviours;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Binus.Customer.Core.Application
+namespace Binus.Reporting.Core.Application
 {
     public static class CoreAppStartup
     {

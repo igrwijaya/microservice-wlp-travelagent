@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Binus.Customer.Core.Domain.AggregateRoots.Post;
-using Binus.Customer.Core.Domain.Dtos.Post;
-using Binus.Customer.Core.Infrastructure.DataSources;
+using Binus.Reporting.Core.Domain.AggregateRoots.Post;
+using Binus.Reporting.Core.Domain.Dtos.Post;
+using Binus.Reporting.Core.Infrastructure.DataSources;
 using Microsoft.EntityFrameworkCore;
 
-namespace Binus.Customer.Core.Infrastructure.Repositories.Post
+namespace Binus.Reporting.Core.Infrastructure.Repositories.Post
 {
     public class PostRepository : BaseRepository<Domain.AggregateRoots.Post.Post>, IPostRepository
     {

@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using Binus.Customer.Core.Domain.AggregateRoots.Post;
-using Binus.Customer.Core.Domain.Commons;
+using Binus.Reporting.Core.Domain.AggregateRoots.Post;
+using Binus.Reporting.Core.Domain.Commons;
 
-namespace Binus.Customer.Core.Domain.AggregateRoots.Account
+namespace Binus.Reporting.Core.Domain.AggregateRoots.Account
 {
     public class Account : CoreEntity, IAggregateRoot
     {

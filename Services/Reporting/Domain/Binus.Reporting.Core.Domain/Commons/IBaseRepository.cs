@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Binus.Customer.Core.Domain.Commons
+namespace Binus.Reporting.Core.Domain.Commons
 {
     public interface IBaseRepository<TEntity>
         where TEntity : IAggregateRoot
@@ -19,6 +19,10 @@ namespace Binus.Customer.Core.Domain.Commons
         Task<bool> IsExist(int id);
 
         IEnumerable<TEntity> GetAll();
+ 
+        CoreDataTable<TEntity> GetDataTable(int page, int size);
+
+        IEnumerable<TEntity> Get(int page, int size);
 
         #endregion
     }

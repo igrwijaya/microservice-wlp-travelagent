@@ -1,7 +1,7 @@
-using Binus.Customer.Core.Constant.Entity;
+using Binus.Reporting.Core.Constant.Entity;
 using FluentValidation;
 
-namespace Binus.Customer.Core.Application.Command.Post.Commands.AddPostCommentByUser
+namespace Binus.Reporting.Core.Application.Command.Post.Commands.AddPostCommentByUser
 {
     public class AddPostCommentByUserCommandValidator : AbstractValidator<AddPostCommentByUserCommand>
     {

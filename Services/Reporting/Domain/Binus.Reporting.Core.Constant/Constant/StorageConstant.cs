@@ -1,4 +1,4 @@
-namespace Binus.Customer.Core.Constant.Constant
+namespace Binus.Reporting.Core.Constant.Constant
 {
     public class StorageConstant
     {

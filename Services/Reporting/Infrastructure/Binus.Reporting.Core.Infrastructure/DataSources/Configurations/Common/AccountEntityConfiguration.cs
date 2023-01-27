@@ -1,9 +1,9 @@
-using Binus.Customer.Core.Constant.Entity;
-using Binus.Customer.Core.Domain.AggregateRoots.Account;
+using Binus.Reporting.Core.Constant.Entity;
+using Binus.Reporting.Core.Domain.AggregateRoots.Account;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Binus.Customer.Core.Infrastructure.DataSources.Configurations.Common
+namespace Binus.Reporting.Core.Infrastructure.DataSources.Configurations.Common
 {
     public class AccountEntityConfiguration : IEntityTypeConfiguration<Account>
     {
