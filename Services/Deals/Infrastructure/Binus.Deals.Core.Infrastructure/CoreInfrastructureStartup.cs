@@ -2,6 +2,7 @@ using System;
 using Binus.Deals.Core.Application.Services;
 using Binus.Deals.Core.Constant.Constant;
 using Binus.Deals.Core.Domain.AggregateRoots.DealsAggregate;
+using Binus.Deals.Core.Domain.AggregateRoots.DealsComponentAggregate;
 using Binus.Deals.Core.Infrastructure.DataSources;
 using Binus.Deals.Core.Infrastructure.Models;
 using Binus.Deals.Core.Infrastructure.Repositories;
@@ -46,6 +47,7 @@ namespace Binus.Deals.Core.Infrastructure
             #region Repositories
 
             services.AddScoped<IDealsRepository, DealsRepository>();
+            services.AddScoped<IDealsComponentRepository, DealsComponentRepository>();
 
             #endregion
 
