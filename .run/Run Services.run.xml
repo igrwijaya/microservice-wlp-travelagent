@@ -1,0 +1,19 @@
+﻿<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run Services" type="CompoundRunConfigurationType">
+    <toRun name="Binus.API: IGR.WebAPI" type="LaunchSettings" />
+    <toRun name="Binus.Services.Accommodation.API" type="LaunchSettings" />
+    <toRun name="Binus.Services.AccommodationAgoda.API" type="LaunchSettings" />
+    <toRun name="Binus.Services.Activities.API" type="LaunchSettings" />
+    <toRun name="Binus.Services.ActivitiesVendor.API" type="LaunchSettings" />
+    <toRun name="Binus.Services.Booking.API" type="LaunchSettings" />
+    <toRun name="Binus.Services.Customer.API" type="LaunchSettings" />
+    <toRun name="Binus.Services.Deals.API" type="LaunchSettings" />
+    <toRun name="Binus.Services.DealsTourRadar.API" type="LaunchSettings" />
+    <toRun name="Binus.Services.Flight.API" type="LaunchSettings" />
+    <toRun name="Binus.Services.FlightAmadeus.API" type="LaunchSettings" />
+    <toRun name="Binus.Services.Partner.API" type="LaunchSettings" />
+    <toRun name="Binus.Services.Reporting.API" type="LaunchSettings" />
+    <toRun name="Binus.Services.Transaction.API" type="LaunchSettings" />
+    <method v="2" />
+  </configuration>
+</component>

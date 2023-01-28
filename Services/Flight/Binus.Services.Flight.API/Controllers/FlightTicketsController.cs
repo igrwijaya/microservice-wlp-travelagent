@@ -12,10 +12,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Binus.Services.Flight.API.Controllers;
 
-public class FlightTicketsController : FlightPassengersController
+public class FlightTicketsController : BaseController
 {
-    public FlightTicketsController(IMediator mediator, IFlightPassengerRepository flightPassengerRepository) : base(mediator, flightPassengerRepository)
+    private readonly IFlightPassengerRepository _flightPassengerRepository;
+    public FlightTicketsController(IMediator mediator, IFlightPassengerRepository flightPassengerRepository) : base(mediator)
     {
+        _flightPassengerRepository = flightPassengerRepository;
     }
         
     #region APIs
@@ -46,7 +48,7 @@ public class FlightTicketsController : FlightPassengersController
             return BadRequest();
         }
         
-        var flightPassenger = await FlightPassengerRepository.ReadWithTicketsAsync(flightPassengerId);
+        var flightPassenger = await _flightPassengerRepository.ReadWithTicketsAsync(flightPassengerId);
         if (flightPassenger == null)
         {
             return BadRequest();
@@ -54,7 +56,7 @@ public class FlightTicketsController : FlightPassengersController
         
         flightPassenger.Tickets.Add(model);
 
-        await BaseRepository.UpdateAsync(flightPassenger);
+        await _flightPassengerRepository.UpdateAsync(flightPassenger);
 
         return Ok(model.Id);
     }
@@ -63,7 +65,7 @@ public class FlightTicketsController : FlightPassengersController
     [AllowAnonymous]
     public ActionResult<CoreDataTable<FlightTicket>> GetDataTableTicket(int flightPassengerId, [FromQuery] int page = 1, [FromQuery] int size = -1)
     {
-        var paginateResponse = FlightPassengerRepository.GetDataTableTickets(flightPassengerId, page, size);
+        var paginateResponse = _flightPassengerRepository.GetDataTableTickets(flightPassengerId, page, size);
         
         return paginateResponse;
     }
@@ -72,7 +74,7 @@ public class FlightTicketsController : FlightPassengersController
     [AllowAnonymous]
     public ActionResult<List<FlightTicket>> GetTicket(int flightPassengerId, [FromQuery] int page = 1, [FromQuery] int size = -1)
     {
-        var response = FlightPassengerRepository.GetTickets(flightPassengerId, page, size);
+        var response = _flightPassengerRepository.GetTickets(flightPassengerId, page, size);
 
         return response.ToList();
     }
@@ -81,7 +83,7 @@ public class FlightTicketsController : FlightPassengersController
     [AllowAnonymous]
     public async Task<ActionResult<FlightTicket>> ReadTicket(int flightPassengerId, int id)
     {
-        var response = await FlightPassengerRepository.ReadTicketAsync(flightPassengerId, id);
+        var response = await _flightPassengerRepository.ReadTicketAsync(flightPassengerId, id);
 
         return response;
     }
@@ -111,7 +113,7 @@ public class FlightTicketsController : FlightPassengersController
             return BadRequest();
         }
         
-        var response = await FlightPassengerRepository.ReadTicketAsync(flightPassengerId, id);
+        var response = await _flightPassengerRepository.ReadTicketAsync(flightPassengerId, id);
         if (response == null)
         {
             return BadRequest();
@@ -119,7 +121,7 @@ public class FlightTicketsController : FlightPassengersController
         
         model.AttachAuditableEntity(response);
         
-        await FlightPassengerRepository.UpdateTicketAsync(model);
+        await _flightPassengerRepository.UpdateTicketAsync(model);
 
         return Ok();
     }
@@ -127,7 +129,7 @@ public class FlightTicketsController : FlightPassengersController
     [HttpDelete("/FlightPassengers/{flightPassengerId}/Tickets/{id}")]
     public async Task<ActionResult> DeleteTicket(int flightPassengerId, int id)
     {
-        await FlightPassengerRepository.DeleteTicketAsync(flightPassengerId, id);
+        await _flightPassengerRepository.DeleteTicketAsync(flightPassengerId, id);
 
         return Ok();
     }

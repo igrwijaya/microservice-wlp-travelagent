@@ -12,10 +12,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Binus.Services.Partner.API.Controllers;
 
-public class PartnerSettingsController : PartnersController
+public class PartnerSettingsController : BaseController
 {
-    public PartnerSettingsController(IMediator mediator, IPartnerRepository partnerRepository) : base(mediator, partnerRepository)
+    private readonly IPartnerRepository _partnerRepository;
+    
+    public PartnerSettingsController(IMediator mediator, IPartnerRepository partnerRepository) : base(mediator)
     {
+        _partnerRepository = partnerRepository;
     }
     
     #region APIs
@@ -46,7 +49,7 @@ public class PartnerSettingsController : PartnersController
             return BadRequest();
         }
 
-        var deals = await PartnerRepository.ReadWithSettingsAsync(partnerId);
+        var deals = await _partnerRepository.ReadWithSettingsAsync(partnerId);
         if (deals == null)
         {
             return BadRequest();
@@ -54,7 +57,7 @@ public class PartnerSettingsController : PartnersController
         
         deals.Settings.Add(model);
 
-        await BaseRepository.UpdateAsync(deals);
+        await _partnerRepository.UpdateAsync(deals);
 
         return Ok(model.Id);
     }
@@ -63,7 +66,7 @@ public class PartnerSettingsController : PartnersController
     [AllowAnonymous]
     public ActionResult<CoreDataTable<PartnerSetting>> GetDataTableSetting(int partnerId, [FromQuery] int page = 1, [FromQuery] int size = -1)
     {
-        var paginateResponse = PartnerRepository.GetDataTableSettings(partnerId, page, size);
+        var paginateResponse = _partnerRepository.GetDataTableSettings(partnerId, page, size);
         
         return paginateResponse;
     }
@@ -72,7 +75,7 @@ public class PartnerSettingsController : PartnersController
     [AllowAnonymous]
     public ActionResult<List<PartnerSetting>> GetSetting(int partnerId, [FromQuery] int page = 1, [FromQuery] int size = -1)
     {
-        var response = PartnerRepository.GetSettings(partnerId, page, size);
+        var response = _partnerRepository.GetSettings(partnerId, page, size);
 
         return response.ToList();
     }
@@ -81,7 +84,7 @@ public class PartnerSettingsController : PartnersController
     [AllowAnonymous]
     public async Task<ActionResult<PartnerSetting>> ReadSetting(int partnerId, int id)
     {
-        var response = await PartnerRepository.ReadSettingAsync(partnerId, id);
+        var response = await _partnerRepository.ReadSettingAsync(partnerId, id);
 
         return response;
     }
@@ -111,7 +114,7 @@ public class PartnerSettingsController : PartnersController
             return BadRequest();
         }
         
-        var response = await PartnerRepository.ReadSettingAsync(partnerId, id);
+        var response = await _partnerRepository.ReadSettingAsync(partnerId, id);
         if (response == null)
         {
             return BadRequest();
@@ -119,7 +122,7 @@ public class PartnerSettingsController : PartnersController
         
         model.AttachAuditableEntity(response);
         
-        await PartnerRepository.UpdateSettingAsync(model);
+        await _partnerRepository.UpdateSettingAsync(model);
 
         return Ok();
     }
@@ -127,10 +130,11 @@ public class PartnerSettingsController : PartnersController
     [HttpDelete("/Partners/{partnerId}/Settings/{id}")]
     public async Task<ActionResult> DeleteSetting(int partnerId, int id)
     {
-        await PartnerRepository.DeleteSettingAsync(partnerId, id);
+        await _partnerRepository.DeleteSettingAsync(partnerId, id);
 
         return Ok();
     }
 
     #endregion
+
 }

@@ -12,10 +12,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Binus.Services.Deals.API.Controllers;
 
-public class DealsPackagesController : DealsController
+public class DealsPackagesController : BaseController
 {
-    public DealsPackagesController(IMediator mediator, IDealsRepository dealsRepository) : base(mediator, dealsRepository)
+    private readonly IDealsRepository _dealsRepository;
+    
+    public DealsPackagesController(IMediator mediator, IDealsRepository dealsRepository) : base(mediator)
     {
+        _dealsRepository = dealsRepository;
     }
     
     #region APIs
@@ -42,7 +45,7 @@ public class DealsPackagesController : DealsController
 
         var model = (DealsPackage)Activator.CreateInstance(typeof(DealsPackage), @params.ToArray());
 
-        var deals = await DealsRepository.ReadWithPackagesAsync(dealsId);
+        var deals = await _dealsRepository.ReadWithPackagesAsync(dealsId);
         if (deals == null)
         {
             return BadRequest();
@@ -50,7 +53,7 @@ public class DealsPackagesController : DealsController
         
         deals.DealsPackages.Add(model);
 
-        await BaseRepository.UpdateAsync(deals);
+        await _dealsRepository.UpdateAsync(deals);
 
         return Ok(model.Id);
     }
@@ -59,7 +62,7 @@ public class DealsPackagesController : DealsController
     [AllowAnonymous]
     public ActionResult<CoreDataTable<DealsPackage>> GetDataTablePackage(int dealsId, [FromQuery] int page = 1, [FromQuery] int size = -1)
     {
-        var paginateResponse = DealsRepository.GetDataTablePackages(dealsId, page, size);
+        var paginateResponse = _dealsRepository.GetDataTablePackages(dealsId, page, size);
         
         return paginateResponse;
     }
@@ -68,7 +71,7 @@ public class DealsPackagesController : DealsController
     [AllowAnonymous]
     public ActionResult<List<DealsPackage>> GetPackage(int dealsId, [FromQuery] int page = 1, [FromQuery] int size = -1)
     {
-        var response = DealsRepository.GetPackages(dealsId, page, size);
+        var response = _dealsRepository.GetPackages(dealsId, page, size);
 
         return response.ToList();
     }
@@ -77,7 +80,7 @@ public class DealsPackagesController : DealsController
     [AllowAnonymous]
     public async Task<ActionResult<DealsPackage>> ReadPackage(int dealsId, int id)
     {
-        var response = await DealsRepository.ReadPackageAsync(dealsId, id);
+        var response = await _dealsRepository.ReadPackageAsync(dealsId, id);
 
         return response;
     }
@@ -107,7 +110,7 @@ public class DealsPackagesController : DealsController
             return BadRequest();
         }
         
-        var response = await DealsRepository.ReadPackageAsync(dealsId, id);
+        var response = await _dealsRepository.ReadPackageAsync(dealsId, id);
         if (response == null)
         {
             return BadRequest();
@@ -115,7 +118,7 @@ public class DealsPackagesController : DealsController
         
         model.AttachAuditableEntity(response);
         
-        await DealsRepository.UpdatePackageAsync(model);
+        await _dealsRepository.UpdatePackageAsync(model);
 
         return Ok();
     }
@@ -123,7 +126,7 @@ public class DealsPackagesController : DealsController
     [HttpDelete("/Deals/{dealsId}/Packages/{id}")]
     public async Task<ActionResult> DeletePackage(int dealsId, int id)
     {
-        await DealsRepository.DeletePackageAsync(dealsId, id);
+        await _dealsRepository.DeletePackageAsync(dealsId, id);
 
         return Ok();
     }
