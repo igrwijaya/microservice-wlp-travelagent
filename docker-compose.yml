@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  rabbitmq:
+    restart: always
+    image: rabbitmq:3.8-management-alpine
+    environment:
+      - RABBITMQ_ERLANG_COOKIE=1WqgH8N2v1qDBDZDbNy8Bg9IkPWLEpu79m6q+0t36lQ=
+    ports:
+      - 15674:15672
+      - 5674:5672
+    networks:
+      - thesis
+
+  mysql:
+    image: mysql:5.7
+    hostname: db
+    restart: always
+    volumes:
+      - C:/Users/igrwi/Workspace/Infrastructure/DockerVolume/MySql57_thesis:/var/lib/mysql
+    environment:
+      - "MYSQL_ROOT_PASSWORD=root"
+    ports:
+      - 3304:3306
+    networks:
+      - thesis
+
+networks:
+  thesis:
+    driver: bridge

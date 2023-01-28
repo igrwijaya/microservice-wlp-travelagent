@@ -1,0 +1,18 @@
+﻿<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run Migrations" type="CompoundRunConfigurationType">
+    <toRun name="Binus.Accommodation.App.DbMigrations" type="DotNetProject" />
+    <toRun name="Binus.AccommodationAgoda.App.DbMigrations" type="DotNetProject" />
+    <toRun name="Binus.Activities.App.DbMigrations" type="DotNetProject" />
+    <toRun name="Binus.ActivitiesVendor.App.DbMigrations" type="DotNetProject" />
+    <toRun name="Binus.Booking.App.DbMigrations" type="DotNetProject" />
+    <toRun name="Binus.Customer.App.DbMigrations" type="DotNetProject" />
+    <toRun name="Binus.Deals.App.DbMigrations" type="DotNetProject" />
+    <toRun name="Binus.DealsTourRadar.App.DbMigrations" type="DotNetProject" />
+    <toRun name="Binus.Flight.App.DbMigrations" type="DotNetProject" />
+    <toRun name="Binus.FlightAmadeus.App.DbMigrations" type="DotNetProject" />
+    <toRun name="Binus.Partner.App.DbMigrations" type="DotNetProject" />
+    <toRun name="Binus.Reporting.App.DbMigrations" type="DotNetProject" />
+    <toRun name="Binus.Transaction.App.DbMigrations" type="DotNetProject" />
+    <method v="2" />
+  </configuration>
+</component>

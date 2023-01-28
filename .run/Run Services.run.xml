@@ -1,6 +1,5 @@
 ﻿<component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Run Services" type="CompoundRunConfigurationType">
-    <toRun name="Binus.API: IGR.WebAPI" type="LaunchSettings" />
     <toRun name="Binus.Services.Accommodation.API" type="LaunchSettings" />
     <toRun name="Binus.Services.AccommodationAgoda.API" type="LaunchSettings" />
     <toRun name="Binus.Services.Activities.API" type="LaunchSettings" />
