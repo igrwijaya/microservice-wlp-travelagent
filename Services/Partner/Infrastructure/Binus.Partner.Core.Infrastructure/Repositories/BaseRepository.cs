@@ -239,6 +239,50 @@ namespace Binus.Partner.Core.Infrastructure.Repositories
             };
         }
         
+        protected CoreDataTable<TDataTable> GetDataTable<TChildEntity, TDataTable>(
+            IQueryable<TChildEntity> entities,
+            CoreDataTableParameter parameter,
+            Func<TChildEntity, TDataTable> modelMapping)
+        {
+            //Paging Size
+            var pageSize = parameter.Length;
+            var skip = parameter.Start;
+
+            var isPropertyAvailable = typeof(TEntity).GetProperties().Any(item => item.Name == parameter.SortColumn);
+
+            //Sorting  
+            if (!(string.IsNullOrEmpty(parameter.SortColumn) && string.IsNullOrEmpty(parameter.SortColumnDirection)) && isPropertyAvailable)
+            {
+                entities = entities.OrderBy(parameter.SortColumn + " " + parameter.SortColumnDirection);
+            }
+
+            //Search  
+            if (!string.IsNullOrEmpty(parameter.SearchParam))
+            {
+                // var whereConditions = typeof(TEntity).GetProperties()
+                //     .Select(propertyInfo => $"{propertyInfo.Name} LIKE '%{parameter.SearchParam}%'")
+                //     .ToList();
+                //
+                // entities = entities.Where(string.Join(" OR ", whereConditions));
+                // customerData = customerData.Where("");
+            }
+
+            //total number of rows count   
+            var recordsTotal = entities.Count();
+
+            //Paging
+            var data = entities.Skip(skip).Take(pageSize).ToList();
+            var modelResult = data.Select(modelMapping).ToList();
+
+            return new CoreDataTable<TDataTable>
+            {
+                Data = modelResult,
+                Draw = parameter.Draw,
+                RecordsFiltered = recordsTotal,
+                RecordsTotal = recordsTotal
+            };
+        }
+        
         protected bool IsExist(Expression<Func<TEntity, bool>> predicate)
         {
             var dbSet = Context.Set<TEntity>();
@@ -268,6 +312,19 @@ namespace Binus.Partner.Core.Infrastructure.Repositories
             return extendedQuery.Invoke(dbSet);
         }
 
+        protected IEnumerable<TResult> Get<TResult>(IQueryable<TResult> query, int page, int size)
+        {
+            if (size == -1)
+            {
+                return query.ToList();
+            }
+            
+            return query
+                .Skip(page * size)
+                .Take(size)
+                .ToList();
+        }
+        
         #endregion
     }
 }

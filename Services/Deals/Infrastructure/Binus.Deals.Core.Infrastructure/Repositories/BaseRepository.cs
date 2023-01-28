@@ -312,7 +312,7 @@ namespace Binus.Deals.Core.Infrastructure.Repositories
             return extendedQuery.Invoke(dbSet);
         }
         
-        public IEnumerable<TResult> Get<TResult>(IQueryable<TResult> query, int page, int size)
+        protected IEnumerable<TResult> Get<TResult>(IQueryable<TResult> query, int page, int size)
         {
             if (size == -1)
             {
