@@ -7,7 +7,8 @@ namespace Binus.Services.Deals.API.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    /*[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]*/
+    [AllowAnonymous]
     public class BaseController : ControllerBase
     {
         #region Constructors

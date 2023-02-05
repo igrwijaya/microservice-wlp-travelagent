@@ -13,11 +13,11 @@ services:
       - thesis
 
   mysql:
-    image: mysql:5.7
+    image: mysql:8.0
     hostname: db
     restart: always
     volumes:
-      - C:/Users/igrwi/Workspace/Infrastructure/DockerVolume/MySql57_thesis:/var/lib/mysql
+      - C:/Users/igrwi/Workspace/Infrastructure/DockerVolume/MySql80_thesis:/var/lib/mysql
     environment:
       - "MYSQL_ROOT_PASSWORD=root"
     ports:

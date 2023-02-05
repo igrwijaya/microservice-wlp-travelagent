@@ -1,7 +1,7 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/AccommodationBookingCodes/{everything}",
+      "DownstreamPathTemplate": "/AccommodationBookingCodes/{paths}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -9,11 +9,11 @@
           "Port": 1400
         }
       ],
-      "UpstreamPathTemplate": "/Accommodations/{everything}",
+      "UpstreamPathTemplate": "/Accommodations/{paths}",
       "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
     },
     {
-      "DownstreamPathTemplate": "/Agoda/{everything}",
+      "DownstreamPathTemplate": "/Agoda/{paths}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -21,11 +21,11 @@
           "Port": 1401
         }
       ],
-      "UpstreamPathTemplate": "/Accommodations/Vendors/Agoda/{everything}",
+      "UpstreamPathTemplate": "/Accommodations/Vendors/Agoda/{paths}",
       "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
     },
     {
-      "DownstreamPathTemplate": "/Activities/{everything}",
+      "DownstreamPathTemplate": "/Activities/{paths}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -33,11 +33,11 @@
           "Port": 1402
         }
       ],
-      "UpstreamPathTemplate": "/Activities/{everything}",
+      "UpstreamPathTemplate": "/Activities/{paths}",
       "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
     },
     {
-      "DownstreamPathTemplate": "/Vendor/{everything}",
+      "DownstreamPathTemplate": "/Vendor/{paths}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -45,11 +45,11 @@
           "Port": 1403
         }
       ],
-      "UpstreamPathTemplate": "/Activities/Vendor/{everything}",
+      "UpstreamPathTemplate": "/Activities/Vendor/{paths}",
       "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
     },
     {
-      "DownstreamPathTemplate": "/Bookings/{everything}",
+      "DownstreamPathTemplate": "/Bookings/{paths}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -57,11 +57,11 @@
           "Port": 1404
         }
       ],
-      "UpstreamPathTemplate": "/Bookings/{everything}",
+      "UpstreamPathTemplate": "/Bookings/{paths}",
       "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
     },
     {
-      "DownstreamPathTemplate": "/Customers/{everything}",
+      "DownstreamPathTemplate": "/Customers",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -69,11 +69,23 @@
           "Port": 1405
         }
       ],
-      "UpstreamPathTemplate": "/Customers/{everything}",
+      "UpstreamPathTemplate": "/Customers",
       "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
     },
     {
-      "DownstreamPathTemplate": "/Deals/{everything}",
+      "DownstreamPathTemplate": "/Customers/{paths}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 1405
+        }
+      ],
+      "UpstreamPathTemplate": "/Customers/{paths}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/Deals",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -81,11 +93,11 @@
           "Port": 1406
         }
       ],
-      "UpstreamPathTemplate": "/Deals/{everything}",
+      "UpstreamPathTemplate": "/Deals",
       "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
     },
     {
-      "DownstreamPathTemplate": "/DealsComponent/{everything}",
+      "DownstreamPathTemplate": "/Deals/{paths}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -93,11 +105,23 @@
           "Port": 1406
         }
       ],
-      "UpstreamPathTemplate": "/Deals/Components/{everything}",
+      "UpstreamPathTemplate": "/Deals/{paths}",
       "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
     },
     {
-      "DownstreamPathTemplate": "/TourRadars/{everything}",
+      "DownstreamPathTemplate": "/DealsComponent/{paths}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 1406
+        }
+      ],
+      "UpstreamPathTemplate": "/Deals/Components/{paths}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/TourRadars/{paths}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -105,11 +129,11 @@
           "Port": 1407
         }
       ],
-      "UpstreamPathTemplate": "/Deals/Vendors/TourRadar/{everything}",
+      "UpstreamPathTemplate": "/Deals/Vendors/TourRadar/{paths}",
       "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
     },
     {
-      "DownstreamPathTemplate": "/FlightPassengers/{everything}",
+      "DownstreamPathTemplate": "/FlightPassengers/{paths}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -117,11 +141,11 @@
           "Port": 1408
         }
       ],
-      "UpstreamPathTemplate": "/Flights/Passengers/{everything}",
+      "UpstreamPathTemplate": "/Flights/Passengers/{paths}",
       "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
     },
     {
-      "DownstreamPathTemplate": "/FlightSearches/{everything}",
+      "DownstreamPathTemplate": "/FlightSearches/{paths}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -129,11 +153,11 @@
           "Port": 1408
         }
       ],
-      "UpstreamPathTemplate": "/Flights/Searches/{everything}",
+      "UpstreamPathTemplate": "/Flights/Searches/{paths}",
       "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
     },
     {
-      "DownstreamPathTemplate": "/Amadeus/{everything}",
+      "DownstreamPathTemplate": "/Amadeus/{paths}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -141,11 +165,11 @@
           "Port": 1409
         }
       ],
-      "UpstreamPathTemplate": "/Flights/Vendors/Amadeus/{everything}",
+      "UpstreamPathTemplate": "/Flights/Vendors/Amadeus/{paths}",
       "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
     },
     {
-      "DownstreamPathTemplate": "/Partners/{everything}",
+      "DownstreamPathTemplate": "/Partners/{paths}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -153,11 +177,11 @@
           "Port": 1410
         }
       ],
-      "UpstreamPathTemplate": "/Partners/{everything}",
+      "UpstreamPathTemplate": "/Partners/{paths}",
       "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
     },
     {
-      "DownstreamPathTemplate": "/Reports/{everything}",
+      "DownstreamPathTemplate": "/Reports/{paths}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -165,11 +189,11 @@
           "Port": 1411
         }
       ],
-      "UpstreamPathTemplate": "/Reports/{everything}",
+      "UpstreamPathTemplate": "/Reports/{paths}",
       "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
     },
     {
-      "DownstreamPathTemplate": "/Transactions/{everything}",
+      "DownstreamPathTemplate": "/Transactions/{paths}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -177,11 +201,12 @@
           "Port": 1412
         }
       ],
-      "UpstreamPathTemplate": "/Transactions/{everything}",
+      "UpstreamPathTemplate": "/Transactions/{paths}",
       "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:4444"
+    "BaseUrl": "https://localhost:4444",
+    "RequestIdKey": "OcRequestId"
   }
 }
