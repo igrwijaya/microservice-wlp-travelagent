@@ -41,6 +41,7 @@ namespace Binus.Deals.Core.Infrastructure
 
             services.AddScoped<IIdentityService, IdentityService>();
             services.AddScoped<IStorageService, StorageService>();
+            services.AddScoped<IQueueService, QueueService>();
 
             #endregion
 
