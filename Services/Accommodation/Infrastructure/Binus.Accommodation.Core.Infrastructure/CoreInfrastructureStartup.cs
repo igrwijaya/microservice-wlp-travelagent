@@ -16,13 +16,13 @@ namespace Binus.Accommodation.Core.Infrastructure
 {
     public static class CoreInfrastructureStartup
     {
-        public static void AddCoreInfrastructure(this IServiceCollection services, IConfiguration configuration)
+        public static void AddCoreInfrastructure(this IServiceCollection services, IConfiguration configuration, string migrationNamespace)
         {
             services.AddDbContext<CoreDbContext>(    
                 dbContextOptions => dbContextOptions
                     .UseMySql(
                         configuration[ConfigurationConstant.ConnMysql],
-                        new MySqlServerVersion(new Version(8, 0)))
+                        new MySqlServerVersion(new Version(8, 0)),b => b.MigrationsAssembly(migrationNamespace))
             );
             
             services.AddIdentity<AppUserIdentity, IdentityRole>(options => 
